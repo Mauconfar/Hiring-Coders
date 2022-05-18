@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* É comum elementos já terem padding e margin por natureza, estou zerando de todos os itens. */
+    box-sizing: border-box;
+    color: #a09038;
+    /* color: rgb(50, 63, 204); */
+    /* Existem 3 formas de colocar cor. Escrever o nome direto "red", colocar o código de cores hexadecimal (HEX)
+ex: #f225114" e o RGB */
+    font-family: 'Roboto', sans-serif; /* Caso não consiga a font Roboto, incluirá a "sans-serif*/
+}  
+
+ul {
+    list-style: none;
+    /* Tirando os estilos das listas. */
+    /* font-size: 20px; */
+    font-style: italic;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* background-image: url(./imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed; */
+
+    /* background: url(./imagens/background.jpg) no-repeat center center fixed;
+    background-size: cover; */
+    
+    background: linear-gradient(90deg, #333333, #dd1818);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    /* Deixei o header flexível, um do lado do outro, imagem e o grupo de UL, e separei eles*/
+    align-items: center;
+    padding: 10px;
+    /* border-bottom: 2px solid #fff; Borda de 1px solida e branca no cabeçalho */
+    /* box-shadow: 1px 1px 10px 1px #fff; */
+    /* Bordar com sombra. Primeiro é a largura da cor, depois ofset horizontal, depois ofset vertical,
+    depois a largura do blur, depois a cor. */
+    border-bottom: 15px ridge #fff; /*com efeito 3D */
+    margin-bottom: 45px;
+} 
+
+header ul{
+    display: flex;
+    
+} /*deixei os 3 elementos UL em flex, um do lado do outro.*/
+
+header ul li{
+    padding: 5px;/*Separei cada LI (list item) da UL (unordered list)*/ 
+    border-bottom: 2px dashed #fff; /*Borda tracejada*/
+}
+
+header ul li a{
+    transition: 300ms; /*o efeito do hover será mais lento.*/
+}
+header ul li a:hover{ /*Pseudoclasse para dar efeito ao passar o mouse */
+    color: #c0a717;
+    text-decoration: underline;
+}
+
+.container{
+    text-align: center;
+}
+
+.container .name h1{
+    font-size: 60px;
+}
+
+.container .name h5{
+    font-size: 25px;
+}
+
+#arrow{
+    font-size: 35px; 
+    cursor: pointer; /*Cursor clicável ao passar o mouse por cima.*/  
+    animation: blink 1s steps(5, start) infinite;
+    /*criei uma função de nome "Blink" que se repete a cada 1 segundo, steps são os passos que vai acontece,
+    ou seja, piscar 5 vezes quando iniciar a página, e o "infinite" induz a animação a repetir infinitamente.
+    Para funcionar precisa do KeyFrames, onde vou "criar a função".*/
+}
+
+@keyframes blink{
+    to {
+        visibility: hidden; /*Criei a função de piscar.*/
+    }
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.active{ /*Classe para fazer a classe "about" aparecer ao clicar no arrow.*/
+    display: block !important;    
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+}
+
+.form input{
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    /* Arredondamento das bordas do input com os valores superio-esquerdo, superior-direito, inferior-direito
+    e inferior-direito. */
+
+}
+
+.form button {
+    width: 15%;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #c09717 50%, #9c551b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out; /*Todos itens na transição. "lenta e pra fora" */
+    border-radius: 0px 5px 5px 0px;
+    /* Arredondamento das bordas do input com os valores superio-esquerdo, superior-direito, inferior-direito
+    e inferior-direito. */
+    margin-left: -5px; /*Margem negativa pra juntar o botão ao input do formulário.*/
+    margin-top: 20px;
+}
+
+.form button:hover{
+    background-position: left bottom;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 480px){ /*Resolvendo questões de responsividade em celulares.*/
+    .container .name h1{
+        font-size: 30px;
+    }
+    .container .name h5{
+        font-size: 15px;
+    }
+    
+    #about p{
+        max-width: 80%;
+        text-align: justify;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 768px){ /*Resolvendo questões de responsividade em ipad e menores.*/
+    .form{
+        width: 100%;
+    }
+}

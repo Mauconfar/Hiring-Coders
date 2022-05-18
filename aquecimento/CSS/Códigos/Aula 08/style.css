@@ -1,0 +1,55 @@
+* { /* Responsável por selecionar todos elementos do HTML*/
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+/*
+#primeiro {  Selecionei a ID primeiro
+    border: 1px solid green;
+    margin: 30px; Margem (pra entender a diferença do padding abaixo. Margin fica FORA do elemento 
+}
+
+.segundo {
+    border: 5px solid black;
+    padding: 15px;  Almofada (pra entender a diferença do margin acima.) o padding fica DENTRO do elemento. 
+}
+
+*/
+
+
+#primeiro,
+.segundo,
+.navigation {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 5px ;
+} /* Da forma acima, separando os elementos por vírgula, o CSS alterará todos os elementos citados
+que estejam presentes no HTML, de forma separada. DIFERENTE do que ocorre abaixo.*/
+
+nav span {
+    color: indigo;    
+    cursor: pointer;
+    transition: 300ms; /*Transition se coloca no seletor, e não no hover.*/
+
+} /* Já nesse exemplo, como NÃO SEPAREI por vírgulas, ele procurará um APENAS um span, que esteja dentro
+de uma nav, que esteja dentro da classe navigation, de forma EXCLUSIVA.*/
+
+nav span:hover{ /*hover serve para mudar o estilo AO PASSAR O MOUSE, ex: mudar de cor e por underline.*/
+     text-decoration: underline;
+     color: black;
+     background-color: lightcoral;
+}
+
+.segundo > p {
+    color: green;
+} /* Da forma acima, usando o símbolo ">", o CSS vai buscar dentro da classe "segundo" apenas entre os
+"p" que são "filhos diretos"... 
+Outros que estiverem dentro de outras div ou elementos, não serão estilizados.*/
+
+.segundo > div{
+    display: block !important;
+}
+/*Sem colocar o "!important", não apareceria porque o estilo inline no arquivo HTML tem preferência
+sobre essa estilização. 
+Porém, o !important vai tornar essa estilização preferencial, mesmo estilização abaixo dessa.*/

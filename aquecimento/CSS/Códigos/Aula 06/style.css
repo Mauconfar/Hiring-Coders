@@ -1,0 +1,21 @@
+/*TAGs*/
+body{ /*Estou pegando uma classe inteira, basta digitar o nome da tag*/
+    text-align: center;
+}
+
+/*IDs*/
+/* Usa-se "#" para referenciar uma "id" criada em um conteúdo do HTML.*/ 
+#login{
+    color: white;
+    background-color: black;
+}
+
+#registre{
+    background-color: blue;
+    color: white;
+}
+
+/* CLASS */
+.copy{
+    font-size: 8px;
+}

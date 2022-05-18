@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* É comum elementos já terem padding e margin por natureza, estou zerando de todos os itens. */
+    box-sizing: border-box;
+    color: #a09038;
+    /* color: rgb(50, 63, 204); */
+    /* Existem 3 formas de colocar cor. Escrever o nome direto "red", colocar o código de cores hexadecimal (HEX)
+ex: #f225114" e o RGB */
+    font-family: 'Roboto', sans-serif; /* Caso não consiga a font Roboto, incluirá a "sans-serif*/
+}  
+
+ul {
+    list-style: none;
+    /* Tirando os estilos das listas. */
+    /* font-size: 20px; */
+    font-style: italic;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* background-image: url(./imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed; */
+
+    /* background: url(./imagens/background.jpg) no-repeat center center fixed;
+    background-size: cover; */
+    
+    background: linear-gradient(90deg, #333333, #dd1818);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    /* Deixei o header flexível, um do lado do outro, imagem e o grupo de UL, e separei eles*/
+    align-items: center;
+    padding: 10px;
+} 
+
+header ul{
+    display: flex;
+    
+} /*deixei os 3 elementos UL em flex, um do lado do outro.*/
+
+header ul li{
+    padding: 5px;
+}/*Separei cada LI (list item) da UL (unordered list)*/ 
+
+.container{
+    text-align: center;
+}
+
+.container .name h1{
+    font-size: 60px;
+}
+
+.container .name h5{
+    font-size: 25px;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.form input{
+    width: 50%;
+}
+
+.form button {
+    width: 15%;
+}

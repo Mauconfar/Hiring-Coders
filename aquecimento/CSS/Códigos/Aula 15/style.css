@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+    /* justify-content: center;  Ficam todos no centro*/
+    /* justify-content: space-between; Ficam o mais separados abrangindo toda a tela */
+    /* justify-content: space-evenly; Ficam separados entre si e também das bordas da tela.
+    align-items: flex-end; */
+
+}
+/* Se deixar apenas "display: flex" os blocos serão organizados de acordo com o tamanho de seus conteúdos,
+tendo, portanto, tamanhos diferentes. */
+
+.flex div {
+    border: 1px solid #000;
+    margin: 15px;
+    flex-basis: 100%; /*Deixa a base/largura de cada DIV com o mesmo tamanho.*/
+}
+
+.flex img {
+    max-width: 100px;
+}
+

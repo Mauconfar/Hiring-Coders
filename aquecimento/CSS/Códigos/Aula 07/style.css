@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+/* Referenciei a classe container, coloquei uma largura máxima, porém ao fazer isso ela não está mais
+centralizada na página. Para corrigir isso usei o estilo "margin" */
+.container{ 
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Sobre a propriedade "margin", colocando dois valores seguidos, eles serão respectivamento as variações das
+margens "Superior e inferior" e "laterais" do elemento.
+Colocando 4 valores, que podem ser pixels, eles serão respectivamento CIMA, DIREITA, BAIXO, ESQUERDA.
+No caso acima, a varização vertical foi "zero" e a horizontal foi "auto" o que centraliza na página
+a área do container.
+*/
+
+    display: flex;
+    /* Dispôs os parágrafos do container um do lado do outro. Com tamanhos proporcionais à quantidade de
+    texto de cada parágrafo.*/
+}
+
+p{
+    text-align: justify;
+    padding: 0 10px; /* "almofada" envolta de cada elemento "p" de "0" nas verticais, e 10px nas laterais,
+    para serapá-los.*/
+}
+
+.lista_footer{
+    list-style: none;/* Tirei as bolinhas que estam anteriores aos itens da lista.*/
+    display: flex;
+    justify-content: center;    
+}
+
+li{
+    padding: 0 10px;
+}
+
+a{
+    text-decoration: none; /*Tirei a decoração (underline) dos elementos "ancora" que estão no footer.*/
+}
