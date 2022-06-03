@@ -30,8 +30,7 @@ const server = http.createServer((req, res) => {
       res.statusCode = 200; //Código de que está tudo certo.
       res.setHeader('Content-Type', 'application/json');
       res.end(resposta); //Parte do código que imprime o texto
-    });
-    
+    });    
   }
   //Selecionar usuário
   else if (urlparse.pathname == "/selecionar-usuario") {
