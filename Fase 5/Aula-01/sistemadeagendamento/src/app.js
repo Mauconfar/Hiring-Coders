@@ -1,7 +1,7 @@
-const express = require('express');
-const router = require('./router'); //importando o router que criamos.
+import express from 'express';
+import routes from './router'; //importando o router que criamos.
 
-class app {
+class App {
     constructor(){
         this.server = express();
         this.middlewares();
@@ -13,5 +13,9 @@ class app {
 
     }
 //PAREI EM 15:50
-    routes(){}
+    routes(){
+        this.server.use(routes);
+    }
 }
+
+export default new App().server;
